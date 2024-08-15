@@ -1,0 +1,179 @@
+@font-face {
+    font-family: Raleway;
+    src: url("fonts/Raleway/Raleway-VariableFont_wght.ttf"),
+         url("fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: Anta;
+    src: url("fonts/Anta/Anta-Regular.ttf");
+}
+@font-face {
+    font-family: Oswald;
+    src: url("fonts/Oswald/Oswald-VariableFont_wght.ttf");
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #000000;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background-color: rgba(88, 54, 27, 0.479);
+
+}
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: .5em;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: rgba(211, 211, 211, 0.7)
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: darker;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.main-header {
+    background-color: #000000;
+    background-size: auto;
+    padding-bottom: 30px;
+}
+
+.main-nav li{
+    padding: 0 5%;
+}
+
+.ff-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: Anta;
+    font-weight: normal;
+    color: #af7800;
+    text-decoration: none;
+
+}
+
+.ff-name-large{
+ font-size: 5em;
+ text-decoration: none;
+}
+
+.content-section{
+    margin: 1em;
+
+}
+
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+
+/* header */
+.section-header{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 75px;
+    padding: 1em;
+
+}
+
+.section-paragraph{
+    font-family: Raleway;
+    font-weight: normal;
+    color: #000000;
+    font-size: 30px;
+}
+
+
+
+/* footer*/
+
+.main-footer{
+    background-color: black;
+    color: #af7800;
+    padding: 2em 0;
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-info{
+    color: #af7800;
+    text-decoration: none;
+}
+
+
+/* Champions page */
+
+.champ{
+    font-size: 60px;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:#af7800;
+}
+
+.champ-year{
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.champ-rec{
+    font-size: 20px;
+    padding-bottom: 7em;
+    text-align: center;
+}
+
+.background-champ{
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+/* Index */
+
+.index-header{
+    font-size: 50px;
+    text-align: center;
+}
