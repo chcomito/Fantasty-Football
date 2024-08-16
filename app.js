@@ -9,7 +9,7 @@ const crypto = require('crypto');
 const userCol = require('./models/userSchema');
 
 // Use environment variables for sensitive information
-const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/BPW';
+const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://chcomito:Ynt2dVJjR5Vbm8o9@cluster0.cpeyh.mongodb.net/BPW';
 const sessionSecret = process.env.SESSION_SECRET || 'shhhhh';
 
 mongoose.set('bufferCommands', false);
