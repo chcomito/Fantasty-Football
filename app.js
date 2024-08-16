@@ -30,7 +30,7 @@ app.use(session({
 
 app.listen(1234, async () => {
     try {
-      await mongoose.connect('mongodb://127.0.0.1:27017/BPW', { useUnifiedTopology: true });
+      await mongoose.connect('mongodb+srv://chcomito:Ynt2dVJjR5Vbm8o9@cluster0.cpeyh.mongodb.net/BPW', { useUnifiedTopology: true });
       console.log("Database connection successful");
     } catch (e) {
       console.log("Database connection error:", e.message);
