@@ -25,14 +25,14 @@ app.use(session({
 }));
 
 app.listen(1234, async () => {
-  try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/BPW', { useNewUrlParser: true, useUnifiedTopology: true });
-  } catch (e) {
-    console.log(e.message);
-  }
-  console.log("Server is running...");
-});
-
+    try {
+      await mongoose.connect('mongodb://127.0.0.1:27017/BPW', { useUnifiedTopology: true });
+      console.log("Database connection successful");
+    } catch (e) {
+      console.log("Database connection error:", e.message);
+    }
+    console.log("Server is running...");
+  });
 function docifyUser(params) {
   let doc = new userCol({
     _id: params._id,
