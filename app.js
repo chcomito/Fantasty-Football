@@ -8,6 +8,10 @@ const session = require('express-session');
 const crypto = require('crypto');
 const userCol = require('./models/userSchema');
 
+// Use environment variables for sensitive information
+const mongoUri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/BPW';
+const sessionSecret = process.env.SESSION_SECRET || 'shhhhh';
+
 mongoose.set('bufferCommands', false);
 
 function genHash(input) {
@@ -33,6 +37,7 @@ app.listen(1234, async () => {
     }
     console.log("Server is running...");
   });
+
 function docifyUser(params) {
   let doc = new userCol({
     _id: params._id,
