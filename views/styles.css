@@ -177,3 +177,90 @@ html, body{
     font-size: 50px;
     text-align: center;
 }
+
+/* Draft */
+
+style
+ table {
+   border-collapse: collapse;
+   width: 95%;
+ }
+ th, td {
+   padding: 8px;
+   text-align: center;
+ }
+ th {
+    background-color: #d46307;
+    color: #e2dfdf;
+ }
+
+ tr {
+    background-color:   #e2dfdf;
+    color: #e2dfdf;
+ }
+ 
+ .draft-input {
+    background-color:  #e2dfdf;
+    color: #e2dfdf;
+    font-size: 20px;
+ }
+
+ /* Signup/login */
+
+ input[type=text], input[type=password], input[type=email]{
+    padding: 12px 20px;
+    width: 30%;
+    margin: 8px 1% 8px 1%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+    transition: width .1s ease-in-out;
+  }
+
+  input:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 50%;
+  }
+
+  input:focus{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 50%;
+  }
+
+  .input{
+    margin: 80px 10% 80px 10%;
+
+  }
+
+  label{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+  }
+
+  .form-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+  }
+
+  .form-background{
+    background-image: url(/images/login2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
+
+  input[type=submit]{
+    background-color: #969696;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
