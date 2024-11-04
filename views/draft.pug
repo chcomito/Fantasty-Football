@@ -22,29 +22,3 @@ block content
                 name=`input-${rowIndex}-${colIndex}`,
                 style='width: 100%; border: none; box-sizing: border-box; color: grey;'
               )
-
-  script.
-    document.addEventListener('DOMContentLoaded', () => {
-      // Load saved data
-      const savedData = localStorage.getItem('formData');
-      if (savedData) {
-        const formData = JSON.parse(savedData);
-        for (const [key, value] of Object.entries(formData)) {
-          const input = document.querySelector(`input[name="${key}"]`);
-          if (input) {
-            input.value = value;
-          }
-        }
-      }
-
-      // Save data on change
-      document.querySelectorAll('input[type="text"]').forEach(input => {
-        input.addEventListener('change', () => {
-          const formData = {};
-          document.querySelectorAll('input[type="text"]').forEach(input => {
-            formData[input.name] = input.value;
-          });
-          localStorage.setItem('formData', JSON.stringify(formData));
-        });
-      });
-    });

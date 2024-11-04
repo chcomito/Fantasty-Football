@@ -22,6 +22,12 @@
 html, body{
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
 
 .background{
@@ -65,16 +71,6 @@ html, body{
     padding: 0 5%;
 }
 
-.ff-name {
-    text-align: center;
-    margin: 0;
-    font-size: 4em;
-    font-family: Anta;
-    font-weight: normal;
-    color: #af7800;
-    text-decoration: none;
-
-}
 
 .ff-name-large{
  font-size: 5em;
@@ -83,7 +79,7 @@ html, body{
 
 .content-section{
     margin: 1em;
-
+    flex: 1; /* This makes the content area expand to fill space */
 }
 
 
@@ -144,32 +140,126 @@ html, body{
     text-decoration: none;
 }
 
+.ff-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: Anta;
+    font-weight: normal;
+    color: #af7800;
+    text-decoration: none;
+
+}
 
 /* Champions page */
 
-.champ{
-    font-size: 60px;
+.background-champ{
+    background-image: url(/images/gold2.png);
+    background-size: cover;
+}
+
+.champ-button{
+    font-size: 30px;
+    height: 60px;
+    position: fixed; /* Stay in place */
+    left: 10;
+    top: 220;
+    border-radius: 20%;
+    background-color: #000000;
+    color: #af7800;
+}
+
+.champ-button:hover{
+    font-size: 31px;
+    cursor: pointer;
+}
+
+#championList {
+    margin-top: 20px; /* Space above the list */
+}
+
+/* Text that appears from button*/
+.champion-entry {
+    margin-bottom: 30px; /* Space between entries */
+    padding: 10px; /* Padding around each entry */
     text-align: center;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color:#af7800;
+    border-radius: 5px; /* Optional rounded corners */
 }
 
-.champ-year{
-    font-size: 40px;
-    text-align: center;
-
+.champion-entry div {
+    font-size: 60px; /* Font size for names and years */
 }
 
-.champ-rec{
-    font-size: 20px;
-    padding-bottom: 7em;
-    text-align: center;
+
+/*Champion Popup*/
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
-.background-champ{
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    width: 400px; /* Fixed width for the modal */
 }
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #d9534f; /* Bootstrap danger color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Input Field */
+#userInput {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-top: 10px; /* Space above */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+/* Submit Button */
+#submitInput {
+    background-color: #5cb85c; /* Bootstrap success color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    cursor: pointer;
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Transition effect */
+}
+
+#submitInput:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+}
+
 
 /* Index */
 
@@ -221,13 +311,11 @@ style
   }
 
   input:hover{
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 50%;
+    background-color: rgba(235, 235, 235, 0.5);
   }
 
   input:focus{
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 50%;
+    background-color: rgba(235, 235, 235, 0.5);
   }
 
   .input{
