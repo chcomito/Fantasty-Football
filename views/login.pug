@@ -3,18 +3,17 @@ html
     style 
       include styles.css
 
-title My Website
-
-main
-  h1.form-title.container.title LOGIN
-
-body.form-background
-  form.form-container(method="POST")
-    .input
-      label(for="Username") Username
-      input#uname(type="text", name="uname")
-    .input
-      label(for="Password") Password
-      input#pword(type="password", name="pword")
-    .input
-      input#submit(type="submit", value="Submit")    
+  body.form-container
+    div.form-small-container 
+      h1.form-title Sign in
+      span.form-para.top-span Login and make your account to get started.
+      form(method="POST")
+        .input
+          input#uname.input-box(type="text", placeholder="Username", name="uname")
+        .input
+          input#pword.input-box(type="password", placeholder="Password", name="pword")
+        .input
+          input#submit(type="submit", value="Login")    
+      span.form-para.bottom-span No account? Sign up here for free.
+      a(href="/register")
+        button.redirect-to-register Signup

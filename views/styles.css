@@ -51,14 +51,14 @@ body {
 }
 
 .nav a:hover {
-    background-color: rgba(211, 211, 211, 0.7)
+    background-color: rgba(211, 211, 211, 0.9)
 }
 
 .main-nav {
     text-align: center;
     font-size: 1.1em;
     font-weight: darker;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
 
 .main-header {
@@ -164,7 +164,7 @@ body {
     position: fixed; /* Stay in place */
     left: 10;
     top: 220;
-    border-radius: 20%;
+    border-radius: 1em;
     background-color: #000000;
     color: #af7800;
 }
@@ -205,7 +205,7 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -297,58 +297,79 @@ style
 
  /* Signup/login */
 
- input[type=text], input[type=password], input[type=email]{
-    padding: 12px 20px;
-    width: 30%;
-    margin: 8px 1% 8px 1%;
-    box-sizing: border-box;
-    border-radius: 6px;
-    display:flex;
-    flex-wrap: wrap;
-    align-items:center;
+  .form-container{
+    background-image: url(images/american-football-arena-yellow-goal-600nw-2357573507.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
     justify-content: center;
-    transition: width .1s ease-in-out;
+    align-items: center;
   }
 
-  input:hover{
-    background-color: rgba(235, 235, 235, 0.5);
+  .form-small-container{
+    background: rgba(36, 50, 49, 0.9);
+    background: linear-gradient(270deg, rgba(36, 50, 49, 0.9) 0%, hsla(134, 57%, 16%, .9) 100%);
+    background: -moz-linear-gradient(270deg, hsla(176, 16%, 17%, .9) 0%, hsla(134, 57%, 16%, .9) 100%);
+    background: -webkit-linear-gradient(270deg, hsla(176, 16%, 17%, .9) 0%, hsla(134, 57%, 16%, .9) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#253332", endColorstr="#12421D", GradientType=1 );padding: 150px 70px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 25px 0px rgb(0, 0, 0);
+    text-align: center;
   }
 
-  input:focus{
-    background-color: rgba(235, 235, 235, 0.5);
+  form{
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
-  .input{
-    margin: 80px 10% 80px 10%;
-
+  .input {
+    font-family: fantasy;
+    padding: 5px;
   }
 
-  label{
+  .input-box {
     font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(255, 255, 255);
+    border-radius: .25em;
+    border: none;
+    background-color: #08180f7e;
+    color: #ffffff;
+  }
+
+  input::placeholder {
+    font-size: 15px;
+    padding-left: 10px;
+    color: #ffffff27;
+  }
+
+  #submit{
+    border-radius: 1em;
+    width: 150px;
+    height: 30px; 
+    border: none;
+  }
+
+  
+  #submit:hover{
+    width: 155px;
+    cursor: pointer;
   }
 
   .form-title{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 90px;
-    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
   }
 
-  .form-background{
-    background-image: url(/images/login2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;
-    min-width: 100%;
+  .form-para{
+    color: #ffffff;
+    padding: 1em;
   }
 
-  input[type=submit]{
-    background-color: #969696;
+  .redirect-to-register{
+    border-radius: .25em;
     border: none;
-    color: rgb(0, 0, 0);
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
+  }
+
+  .redirect-to-register:hover{
     cursor: pointer;
   }
