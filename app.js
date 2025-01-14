@@ -4,11 +4,11 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const userCol = require('./models/userSchema'); // Ensure this file exports a valid Mongoose model
+const userCol = require('./models/userSchema'); 
 
 const app = express();
 
-// Use environment variables for sensitive information
+
 const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://chcomito:Ynt2dVJjR5Vbm8o9@cluster0.cpeyh.mongodb.net/';
 const sessionSecret = process.env.SESSION_SECRET || 'shhhhh';
 

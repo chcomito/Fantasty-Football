@@ -3,21 +3,16 @@ html
     style 
       include styles.css
 
-title REGISTER
-
-main
-  h1.title.container.form-title Create Your Account
-
-body.form-background
-  form.form-container(method="POST") 
-    .input
-      label.label(for="Username") Username
-      input#uname(type="text", name="uname")
-    .input
-      label.label(for="Password") Password
-      input#pword(type="password", name="pword")
-    .input
-      label.label(for="email") Email
-      input#email(type="email", name="email")
-    .input
-      input#submit(type="submit", value="Submit")   
+  body.form-container
+    div.form-small-container 
+      h1.form-title Sign Up
+      span.form-para.top-span Signup and make your account to get started.
+      form(method="POST")
+        .input
+          input#uname.input-box(type="text", placeholder="Username", name="uname")
+        .input
+          input#pword.input-box(type="password", placeholder="Password", name="pword")
+        .input
+          input#email.input-box(type="email", placeholder="Email", name="email")
+        .input
+          input#submit(type="submit", value="Get Started")    
